@@ -1,0 +1,244 @@
+                           SOAL DATA ANALYST 
+,
+ 
+,
+Ketentuan: 
+,
+   1.  Peserta wajib mengerjakan tes ini secara individual. 
+   2.  Anda boleh tidak menjawab pada soal yang menurut Anda sulit. Tetapi itu akan mengurangi 
+       poin nilai Anda. 
+   3.  Setiap  jawaban  akan  menjadi  pertanyaan  lanjutkan  dalam  sesi wawancara.  Pastikan  Anda 
+       memahami betul isi jawaban Anda. 
+   4.  Jawaban setiap section disimpan dalam file terpisah. 
+"   5.  Jawaban dikirim via email ke: liliek.handjoko@support.bappenas.go.id paling lambat Senin, 9 "
+       Januari 2023 pukul 23.59 WIB. 
+,
+ 
+                                    SECTION 1 
+,
+Dalam sebuah perusahaan terdapat 3 buah data sebagai berikut: 
+,
+       Data Karyawan 
+,
+        Nama Lengkap       Nomor Karyawan      Tanggal Perekrutan Tanggal 
+                                                                  Pemberhentian 
+        Kenari Putra       079-A-01-432        5 Januari 2018     - 
+        Himawan Maryadi    079-B-03-443        8 Maret 2017       - 
+        Yance Andriani     079-C-02-464        1 April 2015       - 
+        Mahdi Sitorus      079-B-06-894        10 Januari 2021    - 
+        Ani Sudiati        079-C-02-927        25 Mei 2020        - 
+        Diana Kusmawati    079-A-04-032        7 April 2021       - 
+        Gasti Utami        079-B-03-169        6 Februari 2018    - 
+        Surya Firgantoro   079-E-01-382        1 Januari 2000     31 Desember 2018 
+        Najwa Mulyani      079-E-01-390        1 Januari 2019     - 
+        
+,
+       Data Jabatan 
+,
+        Kode     Jabatan                     Faktor Gaji 
+        A        Staff Administrasi          1.0 
+        B        Staff Dokumentasi           1.5 
+        C        Junior Programmer           1.8 
+        D        Senior Programmer           2.0 
+        E        Production Manager          2.2 
+        
+,
+       Data Perekrutan 
+,
+        Tahun Perekrutan   Kode Atasan     Faktor Gaji 
+        2013               079-E-01-382    2.0 
+        2014               079-E-01-382    1.9 
+        2015               079-E-01-382    1.8 
+        2016               079-E-01-382    1.7 
+,
+                                                                                  1 
+ 
+        2017               079-E-01-382    1.6 
+        2018               079-E-01-382    1.5 
+        2019               079-E-01-390    1.4 
+        2020               079-E-01-390    1.3 
+        2021               079-E-01-390    1.2 
+        2022               079-E-01-390    1.1 
+        2023               079-E-01-390    1.0 
+ 
+,
+"   •   Dari data diatas, lakukan langkah-langkah sesuai soal dibawah. "
+   •   Anda hanya diperbolehkan menggunakan bahasa pemrograman Python atau R. 
+   •   Dalam soal dibawah yang dimaksud dengan “array” yaitu list / tuple / dict / NumPy Array / 
+       Dataframe Pandas atau tipe larik lainnya dalam Python atau list / matrix / array atau tipe larik 
+       lainnya dalam R. Silahkan pilih tipe larik yang mana saja yang menurut Anda paling baik untuk 
+       digunakan sesuai soal. 
+"   •   Pastikan code yang Anda ketikkan ringkas, rapih, bersih dan dapat berjalan dengan baik. "
+"   •   Semakin ringkas code yang Anda ketikkan, semakin tinggi nilai yang kami berikan. Contoh cara "
+       meringkas code: gunakan fungsi-fungsi built-in pada Pandas 
+,
+ 
+,
+SOAL 1 
+,
+Masukkan  3  buah data  tersebut  kedalam  3  buah variable array.  Beri  nama  array  tersebut 
+"“tdatakaryawan”,  “tdatajabatan”,  dan  “tdataperekrutan”.  Kemudian print  isi  ketiga  array  tersebut "
+sehingga tercetak pada terminal. 
+,
+ 
+,
+SOAL 2 
+,
+Diketahui format “Nomor Karyawan” pada “Data Karyawan” sebagai berikut: 
+,
+       [kode divisi]-[kode jabatan]-[kode keterampilan]-[kode unik] 
+,
+Dimana “kode jabatan” diatas merujuk pada kolom “Kode” di “Data Jabatan”. Contoh: Kenari Putra 
+"memiliki  Nomor  Karyawan  079-A-01-432,  yang  mengidentifikasikan  bahwa Jabatan yang "
+bersangkutan adalah Staff Administrasi. 
+,
+Buatlah  sebuah  fungsi  dengan  nama  “buatDataKaryawanLengkap”.  Parameter  input  dari  fungsi 
+"tersebut yaitu “pkaryawan” yang nantinya akan diisi dengan “tdatakaryawan”, dan “pjabatan” yang "
+nantinya akan diisi dengan “tdatajabatan”. 
+,
+Fungsi tersebut ketika dijalankan akan menggabungkan data dari “pkaryawan” dengan “pjabatan”. 
+"Sehingga output yang dikeluarkan yaitu sebuah array yang memiliki 6 kolom: Nama Lengkap, Nomor "
+"Karyawan, Tanggal Perekrutan, Tanggal Pemberhentian, Jabatan, Faktor  Gaji. Dimana sumber dari "
+masing-masing kolom sebagai berikut: 
+,
+ Nama kolom                                Sumber 
+ Nama Lengkap                              pkaryawan -> Nama Lengkap 
+ Nomor Karyawan                            pkaryawan -> Nomor Karyawan 
+ Tanggal Perekrutan                        pkaryawan -> Tanggal Perekrutan 
+ Tanggal Pemberhentian                     pkaryawan -> Tanggal Pemberhentian 
+,
+                                                                                  2 
+ 
+ Jabatan                                   pjabatan -> Jabatan 
+ Faktor Gaji                               pjabatan -> Faktor Gaji 
+ 
+,
+Kemudian print output dari fungsi tersebut sehingga tercetak pada terminal. Pastikan fungsi tersebut 
+dapat  tetap  berjalan  jika  suatu  saat  terdapat  penambahan  data  pada “tdatakaryawan” maupun 
+“tdatajabatan”. 
+,
+ 
+,
+SOAL 3 
+,
+Diketahui rumus untuk menghitung gaji karyawan adalah sebagai berikut: 
+,
+       Gaji Karyawan = Jumlah Faktor Gaji  x Gaji Dasar 
+,
+Dimana Jumlah Faktor Gaji yang dimaksud yaitu jumlah dari “Faktor Gaji” di “Data Jabatan” dengan 
+“Faktor Gaji” di “Data Perekrutan” untuk karyawan yang dimaksud. 
+,
+Besar Gaji Dasar pada rumus bergantung dari tahun perekrutan karyawan: 
+,
+   •   Perekrutan tahun 2010 sampai 2015 memiliki Gaji Dasar Rp 5.000.000 
+   •   Perekrutan tahun 2016 sampai 2020 memiliki Gaji Dasar Rp 5.500.000 
+   •   Perekrutan tahun 2021 sampai 2025 memiliki Gaji Dasar Rp 6.000.000 
+,
+Buatlah  sebuah fungsi dengan nama “buatDataGajiLengkap”. Parameter input dari fungsi tersebut 
+"yaitu “pkaryawan” yang nantinya akan diisi dengan “tdatakaryawan”, “pjabatan” yang nantinya akan "
+"diisi dengan “tdatajabatan”, dan “ptahunrekrut” yang nantinya akan diisi dengan “tdataperekrutan”. "
+,
+Fungsi tersebut ketika dijalankan akan menghasilkan output sebuah array yang memiliki 3 buah kolom: 
+"“Nama  Lengkap”,  “Nomor  Karyawan”,  dan  “Gaji” dimana  “Gaji”  mengikuti  rumus  yang  sudah "
+diberikan diatas. Output array tersebut haruslah berurutan dimulai dari karyawan yang memiliki gaji 
+terendah sampai gaji tertinggi. 
+,
+Kemudian print output dari fungsi tersebut sehingga tercetak pada terminal. Pastikan fungsi tersebut 
+"dapat  tetap  berjalan  jika  suatu  saat  terdapat  penambahan  data  pada  “tdatakaryawan”, "
+"“tdatajabatan”, maupun “tdataperekrutan”. "
+,
+ 
+,
+SOAL 4 
+,
+Buatlah sebuah fungsi dengan nama “grafikBiayaGajiPerJabatan”. Fungsi tersebut ketika dijalankan 
+akan  menghitung  berapa total  gaji  dari  setiap  jabatan. Kemudian  menampilkannya dalam  grafik. 
+Dimana sumbu X adalah jabatan dan sumbu Y adalah total gaji. 
+,
+ 
+                                    SECTION 2 
+,
+Pertanyaan pada section ini masih berkaitan dengan section 1. 
+,
+Jawablah pertanyaan berikut: 
+,
+   1.  Ketika Anda mengerjakan Section 1 jenis larik apa saja (list / array / tuple / matrix / dsb) yang 
+       Anda gunakan? Mengapa Anda menggunakan jenis larik tersebut? 
+,
+                                                                                  3 
+ 
+"   2.  Menurut Anda, apakah code yang Anda ketikkan dapat dengan mudah dibaca dan dimodifikasi "
+       oleh programmer lainnya? Jelaskan alasannya 
+"   3.  Ketika  Anda  mengerjakan  Section  1  Soal  4,  jenis  grafik  apa  yang  Anda  berikan  (batang  / "
+       histogram / garis / lainnya)? Mengapa Anda menggunakan jenis grafik tersebut? 
+   4.  Apakah  code  yang  Anda  buat  dapat  berjalan  pada  jumlah  data  besar  (big  data)?  Jelaskan 
+       alasannya 
+"   5.  Pada section 1, hal apa yang Anda lakukan agar code Anda menjadi ringkas? Jelaskan alasan "
+       Anda menggunakan cara tersebut 
+,
+ 
+                                    SECTION 3 
+,
+Data yang menjadi bahan pada section ini adalah file ini sendiri. Anda dapat menggunakan bahasa 
+Python atau R untuk menjawab soal ini. Anda dapat menggunakan library external untuk menjawab 
+soal ini. 
+,
+Kerjakan soal berikut: 
+,
+   1.  Buatlah sebuah fungsi untuk membaca kemudian mengekstrak setiap kata yang ada pada file 
+       ini. Output yang harus ditampilkan yaitu kata dan jumlahnya. 
+"   2.  Buat fungsi kedua dengan isi yang sama seperti soal nomor 1, tetapi dalam hal ini hilangkan "
+       kata yang termasuk stop-word. 
+"   3.  Buat  fungsi  ketiga  dengan  isi  yang  sama  seperti  soal  nomor  1,  tetapi  dalam  hal  hanya "
+       masukkan kata yang berbahasa inggris dan tidak termasuk stop-word. 
+   4.  Buatlah fungsi untuk mengekstract semua table yang ada pada file ini kedalam dataframe. 
+       Dataframe yang dimaksud disini yaitu Pandas Dataframe (jika Anda menggunakan Python) 
+       atau R Dataframe (jika Anda menggunakan R). 
+,
+ 
+                                    SECTION 4 
+,
+"Tabel berikut merupakan daftar kendaraan yang dimiliki PT X beserta tahun produksi, harga, dan rata-"
+rata konsumsi bahan bakar harian. 
+,
+ 
+,
+ Nama Pemilik Kendaraan   Tahun       Harga Mobil (Rp juta) Rata-rata Konsumsi  Bahan 
+                          Produksi                         Bakar Harian (liter) 
+ Jarwa Budiyanto          2010        300                  7 
+ Rafid Firgantoro         2010        400                  8 
+ Aurora Rahmawati         2010        330                  6 
+ Jarwa Budiyanto          2010        490                  7 
+ Aurora Rahmawati         2010        400                  6 
+ Kuncara Maryadi          2012        300                  3 
+ Jarwa Budiyanto          2012        490                  2 
+ Jarwa Budiyanto          2012        800                  8 
+ Kuncara Maryadi          2012        400                  3 
+ Kacung Hutapea           2012        300                  4 
+ Jarwa Budiyanto          2015        450                  3 
+ Kuncara Maryadi          2015        860                  7 
+,
+                                                                                  4 
+ 
+ Kacung Hutapea           2015        880                  8 
+ Yani Purnawati           2018        900                  7 
+ Jarwa Budiyanto          2018        340                  3 
+ Yani Purnawati           2018        800                  6 
+ Balijan Uwais            2020        700                  7 
+ Balijan Uwais            2022        980                  5 
+ 
+,
+"Dari tabel tersebut, jawablah soal berikut: "
+,
+   1.  Buatlah fungsi menggunakan bahasa Python / R untuk melakukan clustering pada data diatas 
+       dengan Harga Mobil dan Rata-rata Konsumsi Bahan Bakar Harian sebagai penentu cluster. 
+       Jumlah cluster yang diminta adalah 3 cluster 
+"   2.  Menggunakan  bahasa  Python  / R,  visualisasikan hasil  cluster  pada nomor  1 dan  sebutkan "
+       anggota pada masing-masing cluster yang terbentuk 
+   3.  Eksplorasikan setiap cluster yang terbentuk bagaimana karakteristik masing-masing cluster? 
+   4.  Apakah ada hubungan antara tahun produksi dan konsumsi bbm terhadap harga mobil? jika 
+"       ada, mohon dijelaskan bagaimana hubungannya. "
+,
+,
+                                                                                  5 
+ 
